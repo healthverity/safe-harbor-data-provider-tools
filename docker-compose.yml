@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  safe-harbor-provider-tools:
+    build:
+      context: .
+      dockerfile: ./Dockerfile.test
+    container_name: safe_harbor_provider_tools
+    tty: true
+    volumes:
+      - .:/host
+      - ./scripts:/scripts
+    environment:
+      - INPUT_FILE=${INPUT_FILE}
+      - PUBLIC_KEY=${PUBLIC_KEY}
+    entrypoint: ["scripts/process_files.sh"]
+    command: ["${INPUT_FILE}", "${PUBLIC_KEY}"]

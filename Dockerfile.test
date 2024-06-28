@@ -1,0 +1,12 @@
+FROM ubuntu:20.04
+    MAINTAINER Greg Silverstein <gsilverstein@healthverity.com>
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get update && \
+    apt-get install -y gnupg gzip dos2unix && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
+# Verify GNUPG and gzip installation
+RUN gpg --version && gzip --version

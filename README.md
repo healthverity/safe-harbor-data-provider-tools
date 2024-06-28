@@ -8,6 +8,7 @@ A HealthVerity team member has likely met with you to review the steps required 
 
 - [docker](https://www.docker.com/) 
 - [Git](https://git-scm.com/) 
+- A public key file provided to you by HealthVerity
 
 It is also helpful to have a terminal available. These instructions will work using Unix shells as well as the command prompt or PowerShell on Windows machines. It is also possible to simply use the [Docker Desktop](https://www.docker.com/products/docker-desktop/) application to run these through its built in terminal. If you are not able to use these tools please reach back out to your HealthVerity contact and we will provide you documentation and assistance to work through this within your local system.
 
@@ -16,14 +17,36 @@ It is also helpful to have a terminal available. These instructions will work us
 The Audience Manager application has specific requirements around data format. Most of the difficulty providers encounter is around the encryption process. Data must be GPG encrypted and due to breaking releases we have a requirement as to what version of [GNU Privacy Guard](https://gnupg.org/) is utilized. Depending on your operating system this can be a chore to get installed. This docker configuration ensures you comply with those requirements. On a whole it will give you a single command access to:
 
 - Read in a CSV File
+- Formatting the line terminators
 - Compress it using [gzip](https://www.gzip.org/) 
 - Encrypt it using GNU Privacy Guard version 2.2.xx
 
-The primary reason for this is to remove the efforts you may need to make fighting with your system's package manager to install the required version of GPG.
+## Usage
 
-## Terms and conditions
+To use this container please do the following.
 
-This software repository is fully open source and released under a permissive [MIT License](https://github.com/healthverity/safe-harbor-data-provider-tools/blob/main/LICENSE) which should allow you to easily integrate it into any systems you require.
+1 - Place the public key file and the file you wish to encrypt into an empty directory. 
+2 - From that directory clone this repository
+
+``` shell
+git clone git@github.com:healthverity/safe-harbor.git
+
+# or 
+
+git clone https://github.com/healthverity/safe-harbor.git
+```
+
+3 - Execute the containerized process specifying your data and key
+
+```shell
+INPUT_FILE=your_file.csv PUBLIC_KEY=public_key.asc docker-compose up
+```
+
+Simply replace `your_file.csv` with the csv file you wish to prepare and `public_key.asc` with the public key file you were provided by HealthVerity
+
+4 - That's it!
+
+After completion there will be a matching `your_file.csv.gz.gpg` containing your file encrypted per spec. You can send this to HealthVerity.
 
 ## Questions
 
