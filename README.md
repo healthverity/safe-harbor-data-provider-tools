@@ -28,11 +28,11 @@ To use this container please do the following.
 1 - Clone this repository
 
 ``` shell
-git clone git@github.com:healthverity/safe-harbor.git
+git clone git@github.com:healthverity/safe-harbor-data-provider-tools.git
 
 # or 
 
-git clone https://github.com/healthverity/safe-harbor.git
+git clone https://github.com/healthverity/safe-harbor-data-provider-tools.git
 ```
 
 2 - Move into the directory and copy your data and key into the directory
