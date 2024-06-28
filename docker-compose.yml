@@ -1,0 +1,10 @@
+services:
+  data-prep:
+    image: data-prep-env
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./data:/data
+      - ./keys:/keys
+    working_dir: /data
