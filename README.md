@@ -27,4 +27,7 @@ This software repository is fully open source and released under a permissive [M
 
 ## Questions
 
-If you have any questions regarding this tool or perhaps you were looking for information on HealthVerity's Audience Manager our home page is located [here](https://healthverity.com/audience-manager/) or email [info@healthverity.com](info@healthverity.com).
+If you have any questions regarding this tool or perhaps you were looking for information on HealthVerity's Audience Manager our home page is located [here](https://healthverity.com/audience-manager/).
+
+If you have general questions about Audience Manager you could also email us: [info@healthverity.com](info@healthverity.com)
+If you need support with this process please use this email instead:[support@healthverity.com](support@healthverity.com) 
