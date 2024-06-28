@@ -25,8 +25,7 @@ The Audience Manager application has specific requirements around data format. M
 
 To use this container please do the following.
 
-1 - Place the public key file and the file you wish to encrypt into an empty directory. 
-2 - From that directory clone this repository
+1 - Clone this repository
 
 ``` shell
 git clone git@github.com:healthverity/safe-harbor.git
@@ -34,6 +33,14 @@ git clone git@github.com:healthverity/safe-harbor.git
 # or 
 
 git clone https://github.com/healthverity/safe-harbor.git
+```
+
+2 - Move into the directory and copy your data and key into the directory
+
+``` shell
+cd /path/to/safe-harbor-data-provider-tools
+cp /path/to/your_file.csv /path/to/safe-harbor-data-provider-tools/your_file.csv
+cp /path/to/public_key.asc /path/to/safe-harbor-data-provider-tools/public_key.asc
 ```
 
 3 - Execute the containerized process specifying your data and key
