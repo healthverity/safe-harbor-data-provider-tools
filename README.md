@@ -46,7 +46,7 @@ cp /path/to/public_key.asc /path/to/safe-harbor-data-provider-tools/public_key.a
 3 - Execute the containerized process specifying your data and key
 
 ```shell
-INPUT_FILE=your_file.csv PUBLIC_KEY=public_key.asc docker-compose up
+INPUT_FILE=your_file.csv PUBLIC_KEY=public_key.asc docker-compose run --rm safe-harbor-provider-tools
 ```
 
 Simply replace `your_file.csv` with the csv file you wish to prepare and `public_key.asc` with the public key file you were provided by HealthVerity
