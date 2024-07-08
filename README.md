@@ -57,7 +57,6 @@ After completion there will be a matching `your_file.csv.gz.gpg` containing your
 
 ## Questions
 
-If you have any questions regarding this tool or perhaps you were looking for information on HealthVerity's Audience Manager our home page is located [here](https://healthverity.com/audience-manager/).
+If you are looking for more information on HealthVerity's Audience Manager please access our landing page [here](https://healthverity.com/audience-manager/).
 
-If you have general questions about Audience Manager you could also email us: [info@healthverity.com](info@healthverity.com)
-If you need support with this process please use this email instead:[support@healthverity.com](support@healthverity.com) 
+If you need support with this repository or Audience Manager please email us: [audience-manager-support@healthverity.com](audience-manager-support@healthverity.com)
