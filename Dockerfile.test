@@ -1,5 +1,5 @@
 FROM ubuntu:20.04
-    MAINTAINER Greg Silverstein <gsilverstein@healthverity.com>
+    MAINTAINER Healthverity Audience Manager <audience-manager-support@healthverity.com>
 
 ENV DEBIAN_FRONTEND=noninteractive
 
