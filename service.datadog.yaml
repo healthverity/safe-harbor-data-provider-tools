@@ -1,0 +1,30 @@
+apiVersion: v3
+kind: service
+metadata:
+  name: safe-harbor-data-provider-tools
+  contacts:
+    - name: "#team-cipher-engineering"
+      type: slack
+      contact: https://healthverity.slack.com/archives/C04KX9ZAQ74
+  links:
+    - name: Repository
+      type: doc
+      provider: Github
+      url: https://github.com/healthverity/safe-harbor-data-provider-tools
+    - name: Getting Started Guide
+      type: doc
+      provider: Github
+      url: https://github.com/healthverity/safe-harbor-data-provider-tools?tab=readme-ov-file#safe-harbor-data-provider-tools
+    - name: Solution Overview
+      url: https://healthverity.atlassian.net/wiki/spaces/PRIV/pages/2626682901/Runbook+Onboarding+Consumer+Data+Suppliers
+      type: doc
+      provider: Confluence
+  owner: audience-manager
+spec:
+  tier: "1"
+  lifecycle: production
+  dependsOn: []
+  languages:
+    - shell
+extensions:
+  "@healthverity-platform/attestations": {}
